@@ -768,10 +768,10 @@ a.gray:hover, a.gray:focus, a.grey:hover, a.grey:focus {
   font-size: 1.25em;
   font-weight: bold;
 }
-span.star-pagination {
+a.star-pagination {
   color: #999999;
 }
-span.star-pagination::after {
+a.star-pagination::after {
   display: inline;
   position: relative;
   content: "•";
@@ -782,7 +782,7 @@ span.star-pagination::after {
   width: 0;
 }
 
-blockquote span.star-pagination::after {
+blockquote a.star-pagination::after {
   left: -2.5em;
 }
 /* End lawbox display CSS */
