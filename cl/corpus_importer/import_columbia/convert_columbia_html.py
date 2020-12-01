@@ -27,8 +27,11 @@ def convert_columbia_html(text):
         text = re.sub("</" + pattern + ">", "</" + replacement + ">", text)
 
     # grayed-out page numbers
-    text = re.sub("<page_number>", ' <span class="star-pagination">*', text)
-    text = re.sub("</page_number>", "</span> ", text)
+    text = re.sub(
+        "<page_number>(.+?)</page_number>",
+        ' <span class="star-pagination" id="page\\1">*\\1</span>',
+        text,
+    )
 
     # footnotes
     foot_references = re.findall(
